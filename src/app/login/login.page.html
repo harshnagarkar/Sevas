@@ -1,0 +1,25 @@
+
+<ion-content>
+  
+  <ion-title>Sevas</ion-title>
+<div id="container" class="container">
+  <ion-item class="container">
+    <ion-label position="stacked" class="white">Email <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input [(ngModel)]="email" required type="text"></ion-input>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-label position="stacked"  class="white">Password <ion-text color="danger">*</ion-text></ion-label>
+    <ion-input [(ngModel)]="password" required type="password" ></ion-input>
+  </ion-item>
+<br>
+  <ion-button expand="block" (click)="login()" class="ion-no-margin" >Login</ion-button>
+  <br>
+  <!-- <ion-router-link href="/create-account"> -->
+ <a  [routerLink]="['/create-account']"> <ion-button expand="block" class="ion-no-margin">Signup</ion-button></a>
+<!-- </ion-router-link> -->
+  
+</div>
+  
+</ion-content>
+

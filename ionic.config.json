@@ -1,5 +1,7 @@
 {
   "name": "sevas",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

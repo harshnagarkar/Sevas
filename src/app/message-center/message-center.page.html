@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>messageCenter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Opportunity</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-select interface="popover" ok-text="Okay" cancel-text="Nah" class="select">
+            <ion-select-option value="1">National Dog day</ion-select-option>
+            <ion-select-option value="2">Dog Donation Drive</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+    <ion-col>
+      <ion-item>
+        <br>
+        <ion-textarea size="700">
+          Hello Guys,
+          <br>
+          Thanks for signing up for this opportunity.
+          Make sure you bring food.
+          <br>
+          Thanks
+        </ion-textarea>
+      </ion-item>
+    </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col>
+      <ion-button>Send Email</ion-button>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<!-- 
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="tab1" [routerLink]="['/Opportunities']">
+      <ion-icon name="newspaper-outline"></ion-icon>
+      <ion-label>Opportunities</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2" [routerLink]="['/organisationprofile']">
+      <ion-label>Profile</ion-label>
+      <ion-icon name="person-circle-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3" [routerLink]="['/message-center']">
+      <ion-icon name="golf-outline"></ion-icon>
+      <ion-label>Message Center</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs> -->

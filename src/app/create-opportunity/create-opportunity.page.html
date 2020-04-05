@@ -1,0 +1,54 @@
+<ion-content>
+<ion-grid class="form" >
+  <ion-row class="center">
+    <ion-col>
+      <h1>Create a Opportunity</h1>
+    </ion-col>
+  </ion-row>
+  <ion-row class="center">
+    <ion-col>
+      Upload Image
+      <br>
+      <ion-input [(ngModel)]="image" type="file" (change)="fileChange($event)" required placeholder="Upload file" ></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row class="center">
+    <ion-col class="center">
+      <ion-label>Name: </ion-label>
+      <ion-input [(ngModel)]="name" required placeholder="Name of the Opportunity"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row class="center">
+    <ion-col class="center">
+      <ion-label>location: </ion-label>
+      <ion-input [(ngModel)]="location" required placeholder="101 Oxford"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row class="center">
+  <ion-col>
+    <ion-label>Date: </ion-label>
+    <ion-input [(ngModel)]="date" required placeholder="mm/dd/yyyy"></ion-input>
+  </ion-col>
+  <br/>
+  <ion-col>
+    <ion-label>Time Details: </ion-label>
+    <ion-input [(ngModel)]="time" required placeholder="3pm-4pm"></ion-input>
+  </ion-col>
+</ion-row>
+<ion-row class="center">
+  <ion-col>
+    <ion-label>Description: </ion-label>
+    <ion-item>
+      <ion-textarea [(ngModel)]="description" required placeholder="Enter more information here..."></ion-textarea>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row class="center">
+<ion-col>
+  <ion-button (click)="submit()" expand="full">Create</ion-button>
+</ion-col>
+</ion-row>
+
+</ion-grid>
+</ion-content>
+

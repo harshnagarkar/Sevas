@@ -1,3 +1,10 @@
-ion-content ion-toolbar {
+ion-toolbar {
   --background: translucent;
+}
+ion-content {
+  --background: none;
+  background-image: url('/assets/hands.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -1,0 +1,82 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="row center">
+      <ion-col>
+        <ion-avatar class="avatar-image center">
+          <img src="/assets/profile.jpg" class="profile-image" />
+        </ion-avatar>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="center">
+      <h1>Dog Breaders</h1>
+      </ion-col>
+    </ion-row>
+    <br>
+    <br>
+    <ion-row class="profile-content row">
+      <ion-col>
+        <ion-label>
+          <h2>Points: 100</h2>
+        </ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>
+        <h2>Level: Silver</h2>
+      </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="center">
+        <ion-button [routerLink]="['/createopportunity']"> Create Job</ion-button>
+  </ion-col>
+  </ion-row>
+    <ion-row class="profile-content row">
+      <ion-col>
+    <h4>Jobs Posted</h4>
+  </ion-col>
+  <ion-col>
+   <h3> 5 </h3>
+  </ion-col>
+  </ion-row>
+  <br>
+  <ion-row class="profile-content row">
+    <ion-col>
+  <h4>Job Schedueled</h4>
+</ion-col>
+<ion-col>
+ <h3> 1 </h3>
+</ion-col>
+</ion-row>
+<br>
+  <ion-row class="profile-content row">
+    <ion-col>
+    <ion-button> Change password</ion-button>
+    <ion-button>Logout</ion-button>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<!-- <ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="tab1" [routerLink]="['/opportunities']">
+      <ion-icon name="newspaper-outline"></ion-icon>
+      <ion-label>Opportunities</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2" [routerLink]="['/organisationprofile']">
+      <ion-label>Profile</ion-label>
+      <ion-icon name="person-circle-outline"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3" [routerLink]="['/message-center']">
+      <ion-icon name="golf-outline"></ion-icon>
+      <ion-label>Message Center</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs> -->

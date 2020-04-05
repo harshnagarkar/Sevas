@@ -1,0 +1,66 @@
+
+.container{
+    background-color: transparent;
+  }
+  
+  #container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    // color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  .white{
+    color: white;
+    font-weight: 500;
+  }
+  
+  ion-item { --background: transparent;}
+
+  ion-content {
+    --background: none;
+    background-image: url('/assets/man.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0%;
+  }
+
+  ion-title{
+      font-size: 4em;
+      text-align: center;
+      color: white;
+      font-weight: 800;
+
+  }
+
+  ion-input{
+      color: white;
+      font-size: 2em;
+      font-weight: 500;
+  }
+
+  ion-label{
+    font-weight: 700;
+    font-size: 1.2em;
+  }

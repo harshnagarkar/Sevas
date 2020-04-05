@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+<ion-item>
+  <ion-label position="stacked">Email <ion-text color="danger">*</ion-text></ion-label>
+  <ion-input [(ngModel)]="email" required type="text"></ion-input>
+</ion-item>
+<br>
+<ion-item>
+  <ion-label>* Are you a</ion-label>
+  <ion-select  [(ngModel)]="usertype" required  value="dog">
+    <ion-select-option value="Volunteer">Volunteer</ion-select-option>
+    <ion-select-option value="Organisation">Organisation</ion-select-option>
+  </ion-select>
+</ion-item>
+<br>
+<ion-item>
+  <ion-label position="stacked">Password <ion-text color="danger">*</ion-text></ion-label>
+  <ion-input [(ngModel)]="password" required type="text"></ion-input>
+</ion-item>
+<br>
+<ion-item>
+  <ion-label position="stacked">Confirm Password <ion-text color="danger">*</ion-text></ion-label>
+  <ion-input [(ngModel)]="confirmpassword" required type="text"></ion-input>
+</ion-item>
+<br>
+<ion-button expand="block" type="submit" (click)="signup()" id="sup" class="ion-no-margin">Signup</ion-button>
+</ion-content>

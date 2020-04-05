@@ -1,0 +1,28 @@
+.profile-content{
+    text-align: center;
+}
+
+ion-content {
+    --background: white;
+    // background-image: url('/assets/one_hand.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .row{
+      background-color: white;
+      padding: 0.25em;
+      border-radius: 1em;
+  }
+
+  .center{
+      text-align: center;
+      align-items: center;
+  }
+
+ion-avatar{
+      width: 8em;
+      height: auto;
+      margin-left: 30%;;
+}

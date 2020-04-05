@@ -1,0 +1,39 @@
+ion-content {
+    --background: white;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.profile{
+    background-color: white;
+    border-radius: 1em;
+    padding: 0.25em;
+}
+
+.profile-content{
+    text-align: center;
+    border-radius: 1em;
+    padding: 0.25em;
+}
+
+.profile-image{
+    height: 100%;
+    width: 100%;
+}
+
+.grid-background{
+    background-color: rgb(255, 255, 255);opacity:0.8;;
+}
+
+.center{
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+
+ion-avatar{
+    width: 8em;
+    height: auto;
+    margin-left: 30%;
+}

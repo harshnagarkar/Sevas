@@ -1,0 +1,24 @@
+ion-content{
+    --background: none;
+    background-image: url('/assets/one_hand.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0%;
+    justify-items: space;
+    font-size: 1.25em;
+}
+
+ion-row{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.form{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.center{
+    text-align: center;
+    justify-content: center;
+}
