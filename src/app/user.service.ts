@@ -10,7 +10,7 @@ interface user {
 }
 
 @Injectable()
-export class UserService{
+export  class UserService{
     private user;
 
     constructor (
@@ -65,3 +65,5 @@ export class UserService{
     
 
 }
+
+export default UserService;

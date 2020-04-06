@@ -2,11 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import {AngularFirestore} from '@angular/fire/firestore';
 import { ToastController,AlertController } from '@ionic/angular';
-// import { auth } from 'firebase/app';
-// import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
-
 @Component({
   selector: 'app-create-account',
   templateUrl: './create-account.page.html',
@@ -19,7 +16,9 @@ export class CreateAccountPage implements OnInit {
   confirmpassword: string = ""
   usertype: string=""
 
+
   constructor(
+    
     public auth: AngularFireAuth,
     public toastController: ToastController,
     public alert: AlertController,
@@ -42,7 +41,8 @@ export class CreateAccountPage implements OnInit {
         name: name,
         points: 100,
         jcp: 0,
-        jpending: 1,
+        jpending: 0,
+        profile: ""
       })
 
       console.log(usertype);
@@ -58,6 +58,8 @@ export class CreateAccountPage implements OnInit {
     }
   }
   }
+
+
 
   async presentAlert(message: string, header: string){
     const alert = await this.alert.create({

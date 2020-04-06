@@ -15,7 +15,7 @@ export default class AuthVolunteer implements CanActivate{
         if(await this.user.isAuthenticated()){
             return true;
         }
-        return false;
         this.router.navigate(['/login'])
+        return false;
     }
 }

@@ -8,4 +8,11 @@ ion-content {
 
 ion-item{
     border-radius: 1em;
+    --background: transparent;
+    padding: 0.5em;
+}
+
+.container{
+  height: 100vh;
+  background-color: rgba($color: #ffffff, $alpha: 0.6);
 }

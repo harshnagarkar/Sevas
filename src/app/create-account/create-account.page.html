@@ -1,10 +1,14 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Create Account</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="container">
   <br>
 <ion-item>
   <ion-label position="stacked">Email <ion-text color="danger">*</ion-text></ion-label>
@@ -35,4 +39,5 @@
 </ion-item>
 <br>
 <ion-button expand="block" type="submit" (click)="signup()" id="sup" class="ion-no-margin">Signup</ion-button>
+</div>
 </ion-content>

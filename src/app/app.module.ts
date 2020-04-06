@@ -13,8 +13,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import firebaseConfig from './firebase';
-import { UserService } from './user.service';
-import AuthVolunteer from "./authvol";
+// import {UserService}  from './user.service';
+import {UserService} from './user.service';
+// import AuthVolunteer from "./authvol";
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,9 +23,9 @@ import AuthVolunteer from "./authvol";
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     UserService,
-    AuthVolunteer
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    // AuthVolunteer
   ],
   bootstrap: [AppComponent]
 })
