@@ -14,6 +14,7 @@ import { UserService } from '../user.service';
 })
 export class CreateAccountPage implements OnInit {
   email: string = ""
+  name: string = ""
   password: string = ""
   confirmpassword: string = ""
   usertype: string=""
@@ -28,7 +29,7 @@ export class CreateAccountPage implements OnInit {
     ) { }
 
   async signup(){
-    const {email,password,confirmpassword,usertype} = this
+    const {email,name,password,confirmpassword,usertype} = this
     if(password!==confirmpassword){
       console.error("Passwords don't match")
       this.presentAlert("Passwords dont match","Error")
@@ -37,7 +38,11 @@ export class CreateAccountPage implements OnInit {
       const res = await this.auth.auth.createUserWithEmailAndPassword(email,password);
       this.firestore.doc(`/User/${res.user.uid}`).set({
         email: email,
-        usertype: usertype
+        usertype: usertype,
+        name: name,
+        points: 100,
+        jcp: 0,
+        jpending: 1,
       })
 
       console.log(usertype);

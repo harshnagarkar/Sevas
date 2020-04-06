@@ -29,7 +29,7 @@
 
     <ion-row>
       <ion-col class="center">
-        <ion-button [routerLink]="['/createopportunity']"> Create Job</ion-button>
+        <a [routerLink]="['/org/createopportunity']"><ion-button> Create Job</ion-button></a>
   </ion-col>
   </ion-row>
     <ion-row class="profile-content row">
@@ -53,7 +53,7 @@
   <ion-row class="profile-content row">
     <ion-col>
     <ion-button> Change password</ion-button>
-    <ion-button>Logout</ion-button>
+    <ion-button (click)="logout()">Logout</ion-button>
   </ion-col>
   </ion-row>
   </ion-grid>

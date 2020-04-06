@@ -26,10 +26,10 @@ const routes: Routes = [
   //   path: 'opportunities',
   //   loadChildren: () => import('./opportunities/opportunities.module').then( m => m.OpportunitiesPageModule)
   // },
-  // {
-  //   path: 'create-account',
-  //   loadChildren: () => import('./create-account/create-account.module').then( m => m.CreateAccountPageModule)
-  // },
+  {
+    path: 'create-account',
+    loadChildren: () => import('./create-account/create-account.module').then( m => m.CreateAccountPageModule)
+  },
   // {
   //   path: 'create-opportunity',
   //   loadChildren: () => import('./create-opportunity/create-opportunity.module').then( m => m.CreateOpportunityPageModule)
@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  // {
+  //   path: 'changepassword',
+  //   loadChildren: () => import('./changepassword/changepassword.module').then( m => m.ChangepasswordPageModule)
+  // },
   // {
   //   path: 'organisation',
   //   loadChildren: () => import('./organisation/organisation.module').then( m => m.OrganisationPageModule)

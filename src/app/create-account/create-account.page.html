@@ -8,7 +8,12 @@
   <br>
 <ion-item>
   <ion-label position="stacked">Email <ion-text color="danger">*</ion-text></ion-label>
-  <ion-input [(ngModel)]="email" required type="text"></ion-input>
+  <ion-input [(ngModel)]="email" required type="email"></ion-input>
+</ion-item>
+<br>
+<ion-item>
+  <ion-label position="stacked">Name <ion-text color="danger">*</ion-text></ion-label>
+  <ion-input [(ngModel)]="name" required type="text"></ion-input>
 </ion-item>
 <br>
 <ion-item>
@@ -21,12 +26,12 @@
 <br>
 <ion-item>
   <ion-label position="stacked">Password <ion-text color="danger">*</ion-text></ion-label>
-  <ion-input [(ngModel)]="password" required type="text"></ion-input>
+  <ion-input [(ngModel)]="password" required type="password"></ion-input>
 </ion-item>
 <br>
 <ion-item>
   <ion-label position="stacked">Confirm Password <ion-text color="danger">*</ion-text></ion-label>
-  <ion-input [(ngModel)]="confirmpassword" required type="text"></ion-input>
+  <ion-input [(ngModel)]="confirmpassword" required type="password"></ion-input>
 </ion-item>
 <br>
 <ion-button expand="block" type="submit" (click)="signup()" id="sup" class="ion-no-margin">Signup</ion-button>

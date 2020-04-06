@@ -38,6 +38,7 @@ export class CreateOpportunityPage implements OnInit {
     console.log(name,image,date,location,time,description)
     this.firestore.collection(`Opportunities`).add({
       name: name,
+      // organisation: this.user.
       image: image,
       date: date,
       location: location,
