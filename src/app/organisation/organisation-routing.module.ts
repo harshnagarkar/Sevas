@@ -49,6 +49,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'changepassword',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../changepassword/changepassword.module').then(m => m.ChangepasswordPageModule)
+          },
+        ]
+      },{
         path: '',
         redirectTo: '/org/dashboard',
         pathMatch: 'full'

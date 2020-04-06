@@ -26,6 +26,10 @@ export class UserService{
         return this.user.uid
     }
 
+    getName(){
+        return this.user.name
+    }
+
 
     getUserType(){
         return this.user.usertype;
@@ -36,12 +40,12 @@ export class UserService{
     }
 
     async isAuthenticated() {
-		if(this.user) return true
+		if(this.user) return true;
 
         const user = await this.auth.authState.pipe(first()).toPromise()
-        let data = {}
-        if(user) {
-        let m = this.firestore.collection("/User").doc(user.uid).snapshotChanges()
+        if(user && user.uid) {
+            console.log("reauthenticate")
+        let m = await this.firestore.collection("/User").doc(user.uid).snapshotChanges()
         m.subscribe(resd=>{
           this.setUser({
             email: user.email,
@@ -49,12 +53,14 @@ export class UserService{
             usertype: resd.payload.get("usertype"),
             name: resd.payload.get("name")
         })
-
+        console.log(this.user)
+        return true
           })
-      
-			return true
-		}
-		return false
+          
+		}else{
+        return false
+        }
+        return false
     }
     
 

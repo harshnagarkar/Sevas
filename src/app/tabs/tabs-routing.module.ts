@@ -4,7 +4,7 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'volunteer',
+    path: '',
     component: TabsPage,
     children: [
       {
@@ -34,10 +34,19 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../tab3/tab3.module').then(m => m.Tab3PageModule)
-          }
+          },
         ]
       },
       {
+        path: 'changepassword',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../changepassword/changepassword.module').then(m => m.ChangepasswordPageModule)
+          },
+        ]
+      },{
         path: '',
         redirectTo: '/volunteer/tab2',
         pathMatch: 'full'

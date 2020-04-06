@@ -38,12 +38,13 @@ export class CreateOpportunityPage implements OnInit {
     console.log(name,image,date,location,time,description)
     this.firestore.collection(`Opportunities`).add({
       name: name,
-      // organisation: this.user.
+      organisation: this.user.getName(),
       image: image,
       date: date,
       location: location,
       time: time,
-      description: description
+      description: description,
+      uid: this.user.getUID()
     }).then(async res => {
       const toast = await this.toastController.create({
         message: 'Yay! Thanks for giving seva.',

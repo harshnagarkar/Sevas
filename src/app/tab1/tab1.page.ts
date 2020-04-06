@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
+import { UserService } from '../user.service';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -10,10 +11,20 @@ export class Tab1Page {
   opp = {};
   constructor(
     public firestore: AngularFirestore,
+    public user: UserService
   ) {
     this.getAllOpportunities()
   }
 
+  partcipate(id){
+    console.log(this.opp[id])
+    this.firestore.collection("User").doc(this.user.getUID()).collection("partcipated").doc(id).set({
+      value:this.opp[id]
+    })
+    this.firestore.collection("Opportunities").doc(id).collection("partcipated").doc(this.user.getUID()).set({
+      email: this.user.getemail()
+    })
+  }
 
   getAllOpportunities(){
     const m = this.firestore.collection("Opportunities").snapshotChanges();

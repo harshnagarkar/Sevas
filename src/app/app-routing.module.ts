@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-
+import AuthVolunteer from "./authvol"
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    path: 'volunteer',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule),
+    // canActivate: [AuthVolunteer]
   },
   {
     path: 'org',
@@ -38,6 +39,11 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
+  }
   // {
   //   path: 'changepassword',
   //   loadChildren: () => import('./changepassword/changepassword.module').then( m => m.ChangepasswordPageModule)

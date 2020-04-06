@@ -1,17 +1,19 @@
   <ion-content>
+    <ion-grid>
+    <ion-row *ngFor="let data of opp | keyvalue" >
   <ion-card>
     <ion-card-header>
-      <img src="assets/trash.jpg" />
+      <img src="{{data.value.image}}" />
       <ion-grid>
         <ion-row>
           <ion-col>
-            <ion-card-subtitle>Rebel Clean </ion-card-subtitle>
-            <ion-card-title>Trash pickup drive</ion-card-title>
-            <ion-card-subtitle>Grove 101, Oxford,ms,38655</ion-card-subtitle>
-            <ion-card-subtitle>3/22/2020, 3pm-4pm</ion-card-subtitle>
+            <ion-card-subtitle>{{data.value.organisation}} </ion-card-subtitle>
+            <ion-card-title>{{data.value.name}} </ion-card-title>
+            <ion-card-subtitle>{{data.value.location}}</ion-card-subtitle>
+            <ion-card-subtitle>{{data.value.date}} {{data.value.time}}</ion-card-subtitle>
           </ion-col>
           <ion-col size="2">
-            <ion-button class="join"color="warning" size="2">
+            <ion-button (click)="partcipate(data.key)" class="join"color="warning" size="2">
               <ion-icon name="checkmark-done-outline"></ion-icon>
             </ion-button>
           </ion-col>
@@ -20,60 +22,9 @@
     </ion-card-header>
 
     <ion-card-content>
-      Lets clean Oxford street together. Join us. Free food and 3 hours minimum shift. Community hours granted!
+    {{data.value.description}}
     </ion-card-content>
   </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <img src="assets/dog.jpg" />
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-card-subtitle>Dog Nation</ion-card-subtitle>
-            <ion-card-title>Give dogs bath<ion-icon name="star-outlinels"></ion-icon>
-            </ion-card-title>
-            <ion-card-subtitle>Lamar park, Oxford, ms 38655</ion-card-subtitle>
-            <ion-card-subtitle>3/22/2020, 3pm-4pm</ion-card-subtitle>
-          </ion-col>
-          <ion-col size="2">
-            <ion-button color="warning" size="2"  class="join">
-              <ion-icon name="checkmark-done-outline"></ion-icon>
-            </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-
-    </ion-card-header>
-
-    <ion-card-content>
-      Would you like to give dogs a bath. Calling olemiss students to play, enjoy and give dogs a bath. We are located
-      in
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-header>
-      <img src="assets/Oxford_High.jpg" />
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-card-subtitle>Oxford Highschool</ion-card-subtitle>
-            <ion-card-title>Oxford High school Formal decoration<ion-icon name="star-outlinels"></ion-icon>
-            </ion-card-title>
-            <ion-card-subtitle>Oxford High school, Oxford, ms 38655</ion-card-subtitle>
-            <ion-card-subtitle>3/22/2020, 3pm-4pm</ion-card-subtitle>
-          </ion-col>
-          <ion-col size="2">
-            <ion-button color="warning" size="2"  class="join">
-              <ion-icon name="checkmark-done-outline"></ion-icon>
-            </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-header>
-
-    <ion-card-content>
-      We would like to invite you to come help us in celebrating for Highschool graduates in Oxford. Lets give them to
-      Nice party back.
-    </ion-card-content>
-  </ion-card>
+  </ion-row>
+  </ion-grid>
 </ion-content>
