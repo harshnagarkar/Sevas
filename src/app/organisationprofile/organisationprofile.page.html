@@ -3,7 +3,8 @@
     <ion-row class="row center">
       <ion-col>
         <ion-avatar class="avatar-image center">
-          <img src="/assets/profile.jpg" class="profile-image" />
+          <img src="{{image}}" class="profile-image" />
+          <ion-input [(ngModel)]="image" type="file" (change)="fileChange($event)" required ></ion-input>
         </ion-avatar>
       </ion-col>
     </ion-row>

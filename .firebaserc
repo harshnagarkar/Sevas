@@ -1,14 +1,5 @@
 {
   "projects": {
-    "default": "mad-4-b6e7d"
-  },
-  "targets": {
-    "mad-4-b6e7d": {
-      "hosting": {
-        "app": [
-          "mad-4-b6e7d"
-        ]
-      }
-    }
+    "default": "madproject5"
   }
 }
