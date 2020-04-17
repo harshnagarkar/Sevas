@@ -1,47 +1,44 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>messageCenter</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-item>
-          <ion-label>Opportunity</ion-label>
+        <ion-item class="center">
+          <ion-label> Email Prospects</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="center">
+        
+        <ion-item class="center">
+          <ion-label> Select Opportunity</ion-label>
+          <ion-select  [(ngModel)]="opportunityselect" interface="popover" ok-text="Okay" cancel-text="Nah" class="select">
+            <ion-select-option class="customselect" *ngFor="let data of opp | keyvalue"  value="{{data.key}}">{{data.value}}</ion-select-option>
+            <!-- <ion-select-option value="2">Dog Donation Drive</ion-select-option> -->
+          </ion-select>
         </ion-item>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
         <ion-item>
-          <ion-select interface="popover" ok-text="Okay" cancel-text="Nah" class="select">
-            <ion-select-option value="1">National Dog day</ion-select-option>
-            <ion-select-option value="2">Dog Donation Drive</ion-select-option>
-          </ion-select>
+          <ion-label position="stacked">Message Subject <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input [(ngModel)]="subject" type="text" ></ion-input>
         </ion-item>
       </ion-col>
-
     </ion-row>
     <ion-row>
     <ion-col>
       <ion-item>
         <br>
-        <ion-textarea size="700">
-          Hello Guys,
-          <br>
-          Thanks for signing up for this opportunity.
-          Make sure you bring food.
-          <br>
-          Thanks
+        <ion-textarea  [(ngModel)]="messagedata" rows="15" autoGrow="true" cols="500" Placeholder="The messaage to address goes here">
         </ion-textarea>
       </ion-item>
     </ion-col>
     </ion-row>
     <ion-row>
     <ion-col>
-      <ion-button>Send Email</ion-button>
+      <ion-button (click)="emailProspects()" >Send Email</ion-button>
     </ion-col>
     </ion-row>
   </ion-grid>

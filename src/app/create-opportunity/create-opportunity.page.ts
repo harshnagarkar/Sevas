@@ -6,7 +6,7 @@ import { ToastController,AlertController } from '@ionic/angular';
 // import { finalize } from 'rxjs/operators';
 import {Observable} from 'rxjs';
 import {AngularFirestore} from '@angular/fire/firestore';
-
+import * as firebase from 'firebase/app';
 @Component({
   selector: 'app-create-opportunity',
   templateUrl: './create-opportunity.page.html',
@@ -45,12 +45,24 @@ export class CreateOpportunityPage implements OnInit {
       time: time,
       description: description,
       uid: this.user.getUID()
-    }).then(async res => {
-      const toast = await this.toastController.create({
-        message: 'Yay! Thanks for giving seva.',
-        duration: 2000
-      });
+    }).then(async res => {    
+      this.firestore.collection(`User`).doc(this.user.getUID()).update({
+      jcp: firebase.firestore.FieldValue.increment(1),
+      jpending: firebase.firestore.FieldValue.increment(1)
+
+      }).then(async res => {
+        const toast = await this.toastController.create({
+          message: 'Yay! Thanks for giving seva.',
+          duration: 2000
+        });
+        
       toast.present();
+      this.name=""
+      this.date=""
+      this.location=""
+      this.time=""
+      this.description=""
+      });
 
     }, err => 
     this.presentAlert("Something went wrong",err)

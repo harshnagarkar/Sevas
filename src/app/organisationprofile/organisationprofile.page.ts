@@ -5,6 +5,7 @@ import {AngularFirestore} from '@angular/fire/firestore';
 import { UserService } from '../user.service';
 import {Observable} from 'rxjs';
 import { AngularFireStorage } from '@angular/fire/storage';
+
 @Component({
   selector: 'app-organisationprofile',
   templateUrl: './organisationprofile.page.html',

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
 import { UserService } from '../user.service';
+import * as firebase from 'firebase/app';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -23,6 +24,10 @@ export class Tab1Page {
     })
     this.firestore.collection("Opportunities").doc(id).collection("partcipated").doc(this.user.getUID()).set({
       email: this.user.getemail()
+    })
+    this.firestore.collection("User").doc(this.user.getUID()).update({
+      jpending: firebase.firestore.FieldValue.increment(1),
+      points: firebase.firestore.FieldValue.increment(10)
     })
   }
 

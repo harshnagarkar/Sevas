@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AngularFirestore} from '@angular/fire/firestore';
 import { element } from 'protractor';
 import { UserService } from '../user.service';
+import * as firebase from 'firebase/app';
 @Component({
   selector: 'app-opportunities',
   templateUrl: './opportunities.page.html',
@@ -38,14 +39,23 @@ export class OpportunitiesPage implements OnInit {
 
   deleteOpportunity(id){
     console.log(id)
-    this.firestore.collection("Opportunities",ref => ref.where('uid','==', this.user.getUID() )).doc(id).delete()
+    // this.firestore.collection("Opportunities",ref => ref.where('uid','==', this.user.getUID() )).doc(id).delete()
     const m = this.firestore.collection("User").snapshotChanges();
     m.subscribe(resd =>{
       resd.forEach(resd => {
         const ids = resd.payload.doc.id;
-        const m = this.firestore.collection("User").doc(ids).collection("partcipated").snapshotChanges();
-        m.subscribe(res=>{
-            this.firestore.collection("User").doc(ids).collection("partcipated").doc(id).delete()
+        const p = this.firestore.collection("User").doc(ids).collection("partcipated").snapshotChanges();
+        p.subscribe(res=>{
+            this.firestore.collection("User").doc(ids).collection("partcipated").doc(id).snapshotChanges().subscribe(ress=>{
+              console.log("This is the document",ress.payload.data.length)
+              if(ress.payload.data.length!==0){
+                this.firestore.collection("User").doc(ids).collection("partcipated").doc(id).delete()
+                this.firestore.collection("User").doc(ids).update({
+                  jpending:firebase.firestore.FieldValue.increment(-1),
+                  jcp: firebase.firestore.FieldValue.increment(1)
+                })
+              }
+            })
       });
     })
     })

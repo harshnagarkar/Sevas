@@ -40,7 +40,13 @@ export class VolunteerprofilePage implements OnInit {
     this.name=res.payload.get("name")
     this.jobsCompleted=res.payload.get("jcp")
     this.jobsPending=res.payload.get("jpending")
-    this.level=res.payload.get("level")
+    if(this.points<500){
+      this.level="copper"
+    }else if(this.points<1500){
+      this.level="silver"
+    }else{
+      this.level="gold"
+    }
     })
 
   }
