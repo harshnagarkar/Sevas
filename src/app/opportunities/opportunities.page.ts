@@ -43,6 +43,13 @@ export class OpportunitiesPage implements OnInit {
   deleteOpportunity(id) {
     console.log(id);
     this.firestore.collection("Opportunities",ref => ref.where('uid','==', this.user.getUID() )).doc(id).delete()
+    this.firestore
+    .collection("User")
+    .doc(this.user.getUID())
+    .update({
+      jpending: firebase.firestore.FieldValue.increment(-1),
+      points: firebase.firestore.FieldValue.increment(10)
+    });
     const m = this.firestore.collection("User",ref => ref.where('usertype','==',"Volunteer" )).get();
     m.forEach(res=>{
       res.docs.forEach(resd=>{
@@ -55,14 +62,6 @@ export class OpportunitiesPage implements OnInit {
             jpending: firebase.firestore.FieldValue.increment(-1),
             jcp: firebase.firestore.FieldValue.increment(1),
           });
-          this.firestore
-          .collection("User")
-          .doc(this.user.getUID())
-          .update({
-            jpending: firebase.firestore.FieldValue.increment(-1),
-            jcp: firebase.firestore.FieldValue.increment(1),
-          });
-
         }).catch(res=>{
           console.log("erro",res)
         })
