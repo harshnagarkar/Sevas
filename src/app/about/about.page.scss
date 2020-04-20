@@ -1,0 +1,27 @@
+ion-item { --background: transparent;}
+
+ion-content {
+    --background: none;
+    background-image: url('/assets/man.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0%;
+  }
+
+.head{
+    font-size: 4em;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+
+}
+
+.container{
+    background-color:rgba($color: #ffffff, $alpha: 0.6);
+    justify-content: center;
+    text-align: center;
+    margin-top: 40vh;
+    font-size: 1.5em;
+    color: white;
+}
