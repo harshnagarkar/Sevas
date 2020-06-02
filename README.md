@@ -1,16 +1,16 @@
 # Sevas
 
-![](RackMultipart20200602-4-e7nf14_html_3bc5792e4527045b.png)
+![](https://raw.githubusercontent.com/harshnagarkar/Sevas/master/imgs/app.png)
 
-Volunteer View
+## Volunteer View
 
-![](RackMultipart20200602-4-e7nf14_html_e5e77948cdb83f4.png) ![](RackMultipart20200602-4-e7nf14_html_d1c4ef0158ea5edc.png) ![](RackMultipart20200602-4-e7nf14_html_c2b2f03dae8f40c1.png)
+![](https://raw.githubusercontent.com/harshnagarkar/Sevas/master/imgs/Volunteer.png) ![](RackMultipart20200602-4-e7nf14_html_d1c4ef0158ea5edc.png) ![](https://raw.githubusercontent.com/harshnagarkar/Sevas/master/imgs/Participant.png)
 
-Organiser View
+## Organiser View
 
-![](RackMultipart20200602-4-e7nf14_html_bad7692d3a01fae.png) ![](RackMultipart20200602-4-e7nf14_html_d15b5dd8ef128d31.png)
+![](https://raw.githubusercontent.com/harshnagarkar/Sevas/master/imgs/Opportunities.png) ![](https://raw.githubusercontent.com/harshnagarkar/Sevas/master/imgs/Oprofile.png)
 
-![](RackMultipart20200602-4-e7nf14_html_519ba9db7468c157.png)
+![](https://raw.githubusercontent.com/harshnagarkar/Sevas/master/imgs/message.png)
 
 Sevas, an app that connects volunteers to the organizations.
 
